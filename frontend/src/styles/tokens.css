@@ -1,0 +1,49 @@
+/* Palette A: exact approved HEX values from docs/design/preview.html. */
+:root {
+  --tidal-bg: #F2F6F7; --tidal-surface: #FFFFFF;
+  --tidal-text: #182F39; --tidal-muted: #4D6570;
+  --tidal-brand: #076F7B; --tidal-accent: #9A4524;
+  --tidal-border: #67838C; --tidal-hover: #DCEDEE; --tidal-focus: #006B75;
+  --tidal-dark: #0B1D26; --tidal-dark-surface: #142D38;
+  --tidal-dark-text: #EDF7F7; --tidal-dark-muted: #B3C9CF;
+  --tidal-dark-brand: #61D6CE; --tidal-dark-accent: #E9A882;
+  --tidal-dark-border: #74949E; --tidal-dark-hover: #213F4B;
+  --safe-light: #1E663F; --ad-light: #85500C; --scam-light: #B12E39;
+  --safe-dark: #8CDBAD; --ad-dark: #F2C879; --scam-dark: #FFA6AC;
+  --font-body: 'Be Vietnam Pro', 'Segoe UI', sans-serif;
+  --font-display: 'Space Grotesk', 'Be Vietnam Pro', 'Segoe UI', sans-serif;
+  --font-code: 'JetBrains Mono', Consolas, monospace;
+  --text-small: .875rem; --text-body: 1rem; --text-lead: 1.125rem;
+  --text-h1: clamp(2.75rem, 5.6vw, 5rem); --text-h2: clamp(1.8rem, 3vw, 2.7rem); --text-h3: 1.25rem;
+  --weight-normal: 400; --weight-medium: 500; --weight-strong: 600;
+  --leading-body: 1.75; --leading-heading: 1.2;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px; --space-20: 80px;
+  --radius-control: 6px; --radius-panel: 8px;
+  --shadow-panel: 0 8px 24px rgb(11 29 38 / .06); --shadow-none: none;
+  --container-wide: 1200px; --container-reading: 70ch; --gutter: 32px;
+  --z-content: 0; --z-nav: 10; --z-skip: 100;
+  --duration-instant: 80ms; --duration-fast: 150ms; --duration-normal: 240ms;
+  --duration-slow: 360ms; --duration-cinematic: 750ms;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --bg: var(--tidal-bg); --surface: var(--tidal-surface); --text: var(--tidal-text); --muted: var(--tidal-muted);
+  --brand: var(--tidal-brand); --accent: var(--tidal-accent); --border: var(--tidal-border);
+  --hover: var(--tidal-hover); --active: var(--tidal-hover); --focus: var(--tidal-focus);
+  --on-brand: var(--tidal-surface); --divider: var(--tidal-border);
+  --safe: var(--safe-light); --advertisement: var(--ad-light); --scam: var(--scam-light);
+  color-scheme: light;
+}
+[data-theme='dark'] {
+  --bg: var(--tidal-dark); --surface: var(--tidal-dark-surface); --text: var(--tidal-dark-text); --muted: var(--tidal-dark-muted);
+  --brand: var(--tidal-dark-brand); --accent: var(--tidal-dark-accent); --border: var(--tidal-dark-border);
+  --hover: var(--tidal-dark-hover); --active: var(--tidal-dark-hover); --focus: var(--tidal-dark-brand);
+  --on-brand: var(--tidal-dark); --divider: var(--tidal-dark-border);
+  --safe: var(--safe-dark); --advertisement: var(--ad-dark); --scam: var(--scam-dark);
+  color-scheme: dark;
+}
+@theme inline {
+  --color-page: var(--bg); --color-panel: var(--surface); --color-ink: var(--text); --color-muted: var(--muted);
+  --color-brand: var(--brand); --color-accent: var(--accent); --color-line: var(--border);
+  --color-safe: var(--safe); --color-advertisement: var(--advertisement); --color-scam: var(--scam);
+  --font-sans: var(--font-body); --font-heading: var(--font-display); --font-mono: var(--font-code);
+}

@@ -1,0 +1,6 @@
+.motion-stagger { display:grid; gap:24px; }
+.motion-disclosure { border-block:1px solid var(--border); }
+.motion-disclosure > button { width:100%; display:flex; justify-content:space-between; text-align:start; padding:20px 0; background:transparent; border:0; color:var(--text); cursor:pointer; font:inherit; }
+.disclosure-body { padding-bottom:24px; }
+.tab { position:relative; isolation:isolate; }
+.tab-indicator { position:absolute; inset:auto 0 0; height:2px; background:var(--text); pointer-events:none; }

@@ -1,0 +1,28 @@
+.site-header { position:relative; z-index:var(--z-nav); }
+.site-header .nav-row { min-height:88px; padding-block:20px; border-bottom:1px solid color-mix(in srgb,var(--border) 25%,transparent); }
+.site-header .brandmark { font-size:1.65rem; letter-spacing:-.06em; gap:10px; }
+.site-header .brandmark svg { width:22px; height:22px; }
+.site-header .nav-links { gap:32px; }
+.site-header .nav-link { position:relative; font-size:.8125rem; color:var(--muted); border:0; }
+.site-header .nav-link::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:var(--brand); transform:scaleX(0); transform-origin:left; transition:transform var(--duration-normal) var(--ease-out); }
+.site-header .nav-link:hover,.site-header .nav-link[aria-current='page'] { color:var(--text); }
+.site-header .nav-link:hover::after,.site-header .nav-link[aria-current='page']::after { transform:scaleX(1); }
+.mobile-menu-toggle,.mobile-navigation { display:none; }
+.site-footer { border-top:1px solid color-mix(in srgb,var(--border) 25%,transparent); }
+.footer-main { display:grid; grid-template-columns:1.5fr 1fr; gap:100px; padding-block:56px; }
+.footer-signature { font-family:var(--font-display); font-size:4rem; letter-spacing:-.07em; font-weight:500; line-height:1; text-decoration:none; display:inline-block; }
+.footer-main p { color:var(--muted); max-width:42ch; margin-top:24px; font-size:.8125rem; }
+.footer-navigation { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-self:center; }
+.footer-navigation a { color:var(--text); font-size:.8125rem; text-decoration:none; padding-block:8px; }
+.footer-navigation a:hover { text-decoration:underline; }
+.site-footer .footer-row { border-top:1px solid color-mix(in srgb,var(--border) 25%,transparent); font-size:.625rem; padding-block:24px; }
+@media(max-width:780px) {
+  .site-header .nav-row { flex-direction:row; align-items:center; min-height:76px; padding-block:16px; }
+  .desktop-navigation { display:none!important; }
+  .mobile-menu-toggle { display:inline-flex; align-items:center; gap:10px; color:var(--text); background:transparent; border:0; padding:8px 0 8px 12px; font-size:.75rem; min-height:44px; }
+  .mobile-navigation { display:grid; padding-block:16px 24px; border-bottom:1px solid var(--border); }
+  .mobile-navigation .nav-link { width:100%; padding-block:12px; font-size:1rem; }
+  .footer-main { grid-template-columns:1fr; gap:32px; padding-block:40px; }
+  .footer-signature { font-size:3.5rem; }.footer-main p { font-size:.75rem; }
+  .footer-navigation { gap:12px; }.footer-navigation a { font-size:.75rem; }
+}
